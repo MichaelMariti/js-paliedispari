@@ -1,12 +1,18 @@
 console.log('palindromi')
 
-const parolaUtente = 'Mamma'   // prompt('Inserisci una parola')
+const parolaUtente = prompt('Inserisci una parola')
 console.log(parolaUtente)
 
 // SE parolaUtente è palindroma
 // - console log di "La parola è palindroma"
 // ALTRIMENTI
 // - console log di "La parola non è palindroma"
+if (ePalindroma(parolaUtente)) {
+    console.log('La parola è palindroma')
+
+}   else {
+    console.log('La parola non è palindroma')
+}
 
 function ePalindroma(parola){
 
@@ -16,7 +22,12 @@ function ePalindroma(parola){
     // ALTRIMENTI
     // - return false
 
-    // return true - false
+    if (parolaInvertita === parola) {
+        return true
+    } else {
+        return false
+    }
+
 }
 
 
@@ -31,5 +42,8 @@ function invertiParola(parola) {
     return parolaInvertita
 }
 
-const miaVar = invertiParola('mamma')
-console.log(miaVar)
+// const miaVar = invertiParola('Mamma')
+// console.log(miaVar)
+
+const esito = ePalindroma('Mamma')
+console.log(esito)
